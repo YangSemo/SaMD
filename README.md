@@ -19,7 +19,7 @@ Writer/Maintainer: 2022년 10월 6일 오후 11:24
 - 연합학습(FL)을 활용하여 로컬 클라이언트에 모든 민감한 데이터를 보관하면서 로컬 컴퓨팅 업데이트를 집계하여 중앙 서버의 조정 하에 공유 글로벌 모델을 학습
 - **연합학습을 활용하여 개인화된 다중생체신호 기반 중증도 분류 연합학습 기술 개발**
 
-![Untitled](SaMD(Software%20as%20Medical%20Device)%207b9e14b2afa847b3a67328034918c97e/Untitled.png)
+![1](/images/1.png)
 
 - 활용 Dataset
     - Physionet MIMIC-IV-ED 임상데이터베이스를 활용하여 BIDMC(Beth Israel Deaconess Medical Center)의 중환자실 환자에 대한 다중생체신호 수집
@@ -27,7 +27,7 @@ Writer/Maintainer: 2022년 10월 6일 오후 11:24
         
         ⇒ 중증도 분류 기준: NEWS(National Early Warning Score)
         
-        ![Untitled](SaMD(Software%20as%20Medical%20Device)%207b9e14b2afa847b3a67328034918c97e/Untitled%201.png)
+        ![2](/images/2.png)
         
 
 - 활용 FL Framework
@@ -41,15 +41,15 @@ Writer/Maintainer: 2022년 10월 6일 오후 11:24
 
 - wandb 계정 생성 후 API Key 생성
 
-![Untitled](SaMD(Software%20as%20Medical%20Device)%207b9e14b2afa847b3a67328034918c97e/Untitled%202.png)
+![3](/images/3.png)
 
 - Flower_Client와 Flower_Server 리파지토리에 .env 파일 생성 후 아래와 같이 입력
 
-![Untitled](SaMD(Software%20as%20Medical%20Device)%207b9e14b2afa847b3a67328034918c97e/Untitled%203.png)
+![4](/images/4.png)
 
 - 각 리파지토리안에 있는 requirments.txt 파일 설치
 
-![Untitled](SaMD(Software%20as%20Medical%20Device)%207b9e14b2afa847b3a67328034918c97e/Untitled%204.png)
+![5](/images/5.png)
 
 ## 1-1. Flower Server
 
@@ -295,10 +295,10 @@ python app.py
         - Flower_Client: 터미널 2개
         - Client_Manager: 터미널 2개
     
-    ![Untitled](SaMD(Software%20as%20Medical%20Device)%207b9e14b2afa847b3a67328034918c97e/Untitled%205.png)
+    ![6](/images/6.png)
     
 
-![Untitled](SaMD(Software%20as%20Medical%20Device)%207b9e14b2afa847b3a67328034918c97e/Untitled%206.png)
+![7](/images/7.png)
 
 ### Simple 실행
 
@@ -328,23 +328,23 @@ wait
 1. Round: 50, epochs: 20
     - Global Model Result
         
-        ![Untitled](SaMD(Software%20as%20Medical%20Device)%207b9e14b2afa847b3a67328034918c97e/Untitled%207.png)
+        ![8](/images/8.png)
         
     - 각 Client의 Local Model
         
-        ![Untitled](SaMD(Software%20as%20Medical%20Device)%207b9e14b2afa847b3a67328034918c97e/Untitled%208.png)
+        ![9](/images/9.png)
         
     - 각 Client의 Label 개수 및 하이퍼파라미터 설정 ⇒ Non IID 확인 가능
         - 예시: Client ID: 7
     
-    ![Untitled](SaMD(Software%20as%20Medical%20Device)%207b9e14b2afa847b3a67328034918c97e/Untitled%209.png)
+    ![10](/images/10.png)
     
 
 1. Round: 100, epochs: 30
     - Global Model Result
     
-    ![Untitled](SaMD(Software%20as%20Medical%20Device)%207b9e14b2afa847b3a67328034918c97e/Untitled%2010.png)
+    ![11](/images/11.png)
     
     - 각 Client의 Local Model
 
-![Untitled](SaMD(Software%20as%20Medical%20Device)%207b9e14b2afa847b3a67328034918c97e/Untitled%2011.png)
+![12](/images/12.png)
