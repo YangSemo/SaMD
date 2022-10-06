@@ -1,14 +1,3 @@
-# SaMD(Software as Medical Device)
-
-Person: 양세모
-Status: In Progress
-Tags: Documentation, Guide
-Writer/Maintainer: 2022년 10월 6일 오후 11:24
-
-<aside>
-💡 SaMD(Software as Medical Device) Code
-
-</aside>
 
 # SaMD(Software as Medical Device)
 
@@ -34,6 +23,7 @@ Writer/Maintainer: 2022년 10월 6일 오후 11:24
     - Flower Framework
         - 선정 이유: 다른 Framework에 비해 코드 활용이 간편하고 확장성이 높음
         - 예제 코드 활용: [https://github.com/adap/flower/tree/main/examples/advanced_tensorflow](https://github.com/adap/flower/tree/main/examples/advanced_tensorflow)
+
 
 # Code Guide
 
