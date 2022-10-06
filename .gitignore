@@ -1,4 +1,10 @@
 # Byte-compiled / optimized / DLL files
+.DS_Store
+.idea
+Flower_Client/.DS_Store
+Flower_Server/.DS_Store
+Server_Status/.DS_Store
+Client_Manager/.DS_Store
 __pycache__/
 *.py[cod]
 *$py.class
