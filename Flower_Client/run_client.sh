@@ -5,7 +5,7 @@
 # client 수 설정
 for i in `seq 0 9`; do
     echo "Starting client $i"
-    python /Users/yangsemo/pycharm/news_flower/Flower_Client/client.py --n=${i} &
+    python client.py --n=${i} &
 done
 
 # This will allow you to use CTRL+C to stop all background processes

@@ -50,9 +50,6 @@ client_num = args.n  # client 번호
 # FL client 상태 확인
 app = FastAPI()
 
-# 클라이언트 Label List
-label_list=[]
-
 class FLclient_status(BaseModel):
     FL_client: int = client_num
     FL_client_online: bool = True

@@ -34,7 +34,7 @@ logger = logging.getLogger(__name__)
 class FL_server_parameter:
     num_rounds = 50
     local_epochs = 20
-    batch_size = 2048
+    batch_size = 128
     val_steps = 5
     latest_gl_model_v = 0 # 이전 글로벌 모델 버전
     next_gl_model_v = 0 # 생성될 글로벌 모델 버전
@@ -127,8 +127,8 @@ def fl_server_start(model):
         fraction_fit=1.0, # 클라이언트 학습 참여 비율
         fraction_evaluate=1.0, # 클라이언트 평가 참여 비율
         min_fit_clients=10, # 최소 학습 참여 수
-        min_evaluate_clients=10, # 최소 평가 참여 수
-        min_available_clients=10, # 최소 클라이언트 연결 필요 수
+        min_evaluate_clients=2, # 최소 평가 참여 수
+        min_available_clients=2, # 최소 클라이언트 연결 필요 수
         evaluate_fn=get_eval_fn(model), # 모델 평가 결과
         on_fit_config_fn=fit_config, # batchsize, epoch 수
         on_evaluate_config_fn=evaluate_config, # val_step
@@ -217,7 +217,7 @@ if __name__ == "__main__":
 
     # wandb login and init
     wandb.login(key=os.environ.get('wb_key'))
-    wandb.init(entity='yangsemo', project='s3', name=f'server_v_{server.next_gl_model_v}',
+    wandb.init(entity='yangsemo', project='f_s', name=f'server_v_{server.next_gl_model_v}',
                config={"num_rounds": server.num_rounds, "local_epochs": server.local_epochs, "batch_size": server.batch_size})
 
     today = datetime.datetime.today()

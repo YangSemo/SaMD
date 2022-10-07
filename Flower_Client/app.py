@@ -79,6 +79,9 @@ class PatientClient(fl.client.NumPyClient):
 
     def fit(self, parameters, config):
         """Train parameters on the locally held training set."""
+        print('')
+        print('fit start')
+        print('')
 
         # Update local model parameters
         self.model.set_weights(parameters)
@@ -184,7 +187,7 @@ async def flclientstart(background_tasks: BackgroundTasks, Server_IP: str):
 
     # wandb login and init
     wandb.login(key=os.environ.get('wb_key'))
-    wandb.init(entity='yangsemo', project='client', name=f'client_{client_num}_v_{status.FL_next_gl_model}')
+    wandb.init(entity='yangsemo', project='f_c', name=f'client_{client_num}_v_{status.FL_next_gl_model}')
     time.sleep(2)
 
     logging.info('FL client start')
@@ -361,7 +364,7 @@ def load_partition():
     test_features = np.clip(test_features, -5, 5)
 
     # return (train_df, train_labels), (test_df,test_labels), len(label_list) # 환자의 레이블 개수
-    return (train_df, train_labels), (test_df, test_labels), label_list
+    return (train_df, train_labels), (test_df, test_labels), label_count
 
 
 if __name__ == "__main__":

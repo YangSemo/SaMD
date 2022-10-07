@@ -1,8 +1,12 @@
 # Byte-compiled / optimized / DLL files
 .DS_Store
 .idea
+Flower_Client/local_model
+Flower_Server/gl_model
 Flower_Client/.DS_Store
 Flower_Server/.DS_Store
+Flower_Client/wandb/*
+Flower_Server/wandb/*
 Server_Status/.DS_Store
 Client_Manager/.DS_Store
 __pycache__/
