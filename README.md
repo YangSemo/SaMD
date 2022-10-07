@@ -136,7 +136,7 @@ def fl_server_start(model):
 - NEWS 기반의 Vital Sign 데이터 불러오기
 - `p_list`: 데이터를 많이 보유하고 있는 client(patient)의 ID list
 
-## 2-2. Server_Status
+## 1-2. Server_Status
 
 <aside>
 💡 FL Server의 상태 확인하여 Client_Manager에 전달
@@ -234,9 +234,10 @@ def build_model():
 
 - 비동기적으로 계속해서 각 컴포넌트의 상태를 확인
     
-    ⇒ `**개발과정에서 각 구성요소의 상태가 불안정할수 있기 때문에`** 
+    ⇒ **개발과정에서 각 구성요소의 상태가 불안정할수 있기 때문에** <br>
+    ⇒ **manager가 일정주기로 상태를 확인하고 또는 명령에 대한 반환값을 가지고 정보를 갱신**
     
-         `**manager가 일정주기로 상태를 확인하고 또는 명령에 대한 반환값을 가지고 정보를 갱신**`
+           manager가 일정주기로 상태를 확인하고 또는 명령에 대한 반환값을 가지고 정보를 갱신
     
 
 # Code 실행
