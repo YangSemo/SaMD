@@ -3,7 +3,8 @@
 
 - 현재 의료 서비스는 건강 데이터를 서버에 수집/저장, ML 모델 활용하여 건강 모니터링 서비스 지원
     
-    ⇒ 개인 프라이버시와 관련되어 하나의 서버에 데이터를 수집/저장하면 개인정보 유출 위험 증가
+    ⇒ 개인 프라이버시와 관련되어 하나의 서버에 데이터를 수집/저장하면 개인정보 유출 위험 증가 <br>
+    ⇒ 특히, 민감한 의료데이터는 비식별화 및 개인 정보 보호 문제가 중요
     
 - 연합학습(FL)을 활용하여 로컬 클라이언트에 모든 민감한 데이터를 보관하면서 로컬 컴퓨팅 업데이트를 집계하여 중앙 서버의 조정 하에 공유 글로벌 모델을 학습
 - **연합학습을 활용하여 개인화된 다중생체신호 기반 중증도 분류 연합학습 기술 개발**
@@ -22,7 +23,7 @@
 - 활용 FL Framework
     - Flower Framework
         - 선정 이유: 다른 Framework에 비해 코드 활용이 간편하고 확장성이 높음
-        - 예제 코드 활용: [https://github.com/adap/flower/tree/main/examples/advanced_tensorflow](https://github.com/adap/flower/tree/main/examples/advanced_tensorflow)
+        - 예제 코드 활용: [https://github.com/adap/flower/tree/main/examples/advanced_tensorflow](https://github.com/adap/flower/tree/main/examples/advanced_tensorflow)<br>
 
 
 # Code Guide
